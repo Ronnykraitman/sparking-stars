@@ -5,6 +5,7 @@ def get_dates_by_user_for_neo():
     is_diff_ok = False
     start_date = ""
     end_date = ""
+    print("Neo supports searching in a 7 days range\n")
     while not is_diff_ok:
         start_date = get_date_from_user("Please enter the start date (YYYY-MM-DD): ")
         end_date = get_date_from_user("Please enter the end date (YYYY-MM-DD): ")

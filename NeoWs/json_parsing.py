@@ -1,9 +1,11 @@
 import json
-from pyspark.sql.types import StructType, StructField, StringType, IntegerType, DateType, FloatType, LongType, \
+
+from pyspark.sql import SparkSession
+from pyspark.sql.types import StructType, StructField, StringType, IntegerType, DateType, FloatType, \
     DoubleType, BooleanType
 
 
-def parse_neo_feed(feed_as_json, spark):
+def parse_neo_feed(feed_as_json, spark: SparkSession):
     schema = StructType([
         StructField('ID',
                     StringType(), True),

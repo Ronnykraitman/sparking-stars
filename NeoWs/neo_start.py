@@ -1,6 +1,6 @@
 import signal
 
-from NeoWs.neo_data import get_neo_feed, get_dangerous_asteroids, get_closest_asteroid, get_fastest_asteroid
+from NeoWs.neo_feed import get_neo_feed, get_dangerous_asteroids, get_closest_asteroid, get_fastest_asteroid
 from general_utils import goodbye, show_menu
 
 
@@ -20,13 +20,13 @@ def start(feed_by_dates):
             ("Get the most dangerous asteroids", get_dangerous_asteroids),
             ("Get the closest asteroid to earth at that time", get_closest_asteroid),
             ("Get the fastest asteroid", get_fastest_asteroid),
-            ("Start over with some new dates", neows),
+            ("Start over with some new dates", ()),
             ("Main Menu", ()),
             ("Exit", goodbye)]
         # ("Get asteroids by a custom filter", "soon"),
         while True:
             selection = show_menu(neo_feed_options, "Neo feed options:")
-            neo_feed_options[selection][1](feed_by_dates)
+            neows() if selection == 3 else neo_feed_options[selection][1](feed_by_dates)
 
     except Exception as e:
         print(f"Oh No! Something went wrong: {e}")

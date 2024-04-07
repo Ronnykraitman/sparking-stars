@@ -1,4 +1,9 @@
+from pyspark.sql import SparkSession
 from simple_term_menu import TerminalMenu
+
+
+def get_spark_session(app_name="sparking_stars"):
+    return SparkSession.builder.appName(app_name).getOrCreate()
 
 
 def goodbye():
