@@ -1,15 +1,24 @@
-from NeoWs.neo_start import neows
-import logging
+import base64
 
-logging.getLogger("py4j").setLevel(logging.ERROR)
-logging.getLogger("pyspark").setLevel(logging.ERROR)
+from PIL import Image
+import requests
+from io import BytesIO
+import streamlit as st
+from apod import get_apod_of_this_week
+from streamlit_carousel import carousel
 
-
-def sparking_stars():
-    print("Welcome to sparking_stars")
-
+st.set_page_config(page_title="Sparking Stars", layout="wide", page_icon="✨")
 
 if __name__ == "__main__":
-    first_time_neo_txt: str = ("\nHello, welcome to NEO - your guide in the sky.\n"
-                               "First thing first, lets fetch NASA data for you, shall we?\n")
-    neows(first_time_neo_txt)
+    st.sidebar.title("Sparking Stars")
+    video_url = "/Users/ronny/Downloads/videoplayback.mp4"
+    video_html = """
+        <video autoplay muted loop id="myVideo">
+          <source src="https://www.youtube.com/watch?v=E0EyWtsnPns">
+        </video>
+    """
+
+    st.markdown(video_html, unsafe_allow_html=True)
+    st.title('Video page')
+
+    st.markdown("This text is written on top of the background video! 😁")
