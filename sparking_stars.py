@@ -7,7 +7,7 @@ if __name__ == "__main__":
     video_url = "/Users/ronny/Downloads/videoplayback.mp4"
     video_html = """
         <video autoplay muted loop id="myVideo">
-          <source src="https://www.youtube.com/watch?v=E0EyWtsnPns">
+          <source src="main-sparks.mp4">
         </video>
     """
 
