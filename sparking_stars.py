@@ -4,10 +4,9 @@ st.set_page_config(page_title="Sparking Stars", layout="wide", page_icon="✨")
 
 if __name__ == "__main__":
     st.sidebar.title("Sparking Stars")
-    video_url = "/Users/ronny/Downloads/videoplayback.mp4"
     video_html = """
         <video autoplay muted loop id="myVideo">
-          <source src="main-sparks.mp4">
+          <source src="/main-sparks.mp4">
         </video>
     """
 
