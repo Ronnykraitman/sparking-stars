@@ -6,7 +6,7 @@ if __name__ == "__main__":
     st.sidebar.title("Sparking Stars")
     video_html = """
         <video autoplay muted loop id="myVideo">
-          <source src="/main-sparks.mp4">
+          <source src="main-sparks.mp4">
         </video>
     """
 
