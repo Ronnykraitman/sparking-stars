@@ -1,11 +1,4 @@
-import base64
-
-from PIL import Image
-import requests
-from io import BytesIO
 import streamlit as st
-from apod import get_apod_of_this_week
-from streamlit_carousel import carousel
 
 st.set_page_config(page_title="Sparking Stars", layout="wide", page_icon="✨")
 
